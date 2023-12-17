@@ -60,4 +60,4 @@ $argumentList = "./scripts/prepdocs.py $dataArg $adlsGen2StorageAccountArg $adls
 "--openaimodelname `"$env:AZURE_OPENAI_EMB_MODEL_NAME`" --index $env:AZURE_SEARCH_INDEX " + `
 "$searchImagesArg $visionEndpointArg $visionKeyArg $visionKeyVaultkey $visionKeyVaultName " + `
 "--formrecognizerservice $env:AZURE_FORMRECOGNIZER_SERVICE $tenantArg -v"
-Start-Process -FilePath $venvPythonPath -ArgumentList $argumentList -Wait -NoNewWindow
+Start-Process -FilePath $venvPythonPath -ArgumentList $argumentList -Wait 
