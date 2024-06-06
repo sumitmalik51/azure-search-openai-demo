@@ -182,7 +182,8 @@ param useLocalPdfParser bool = false
 param useLocalHtmlParser bool = false
 
 var abbrs = loadJsonContent('abbreviations.json')
-var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
+var guid =  newGuid()
+var resourceToken = toLower(uniqueString(subscription().id, environmentName, guid))
 var tags = { 'azd-env-name': environmentName }
 
 var tenantIdForAuth = !empty(authTenantId) ? authTenantId : tenantId
